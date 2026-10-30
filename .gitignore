@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.pyo
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data — raw downloads excluded from version control
+data/raw/*
+!data/raw/.gitkeep
+
+# Large artifacts
+models/*.pkl
+models/*.joblib
+
+# Credentials / local environment
+.env
+*.token
+*.key
+kaggle.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
