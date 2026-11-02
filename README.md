@@ -28,7 +28,15 @@ Analyze historical retail grocery sales, identify temporal patterns, and produce
    ```
 4. Download the dataset from Kaggle (requires account and competition acceptance):
    - Visit: https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data
-   - Place downloaded files in `data/raw/`
+   - Place downloaded files in `data/raw/` (see `docs/DATASET.md` for details)
+5. Verify the dataset is readable:
+   ```powershell
+   python -m src.data_loader
+   ```
+6. Run the tests:
+   ```powershell
+   python -m pytest
+   ```
 
 ## Repository Structure
 ```
@@ -53,6 +61,9 @@ retail-sales-forecasting/
     reports/
         figures/
     models/
+    docs/
+        DATASET.md
+    pytest.ini
 ```
 
 ## Forecasting Approach (Overview)
@@ -65,7 +76,9 @@ retail-sales-forecasting/
 - [x] Repository initialized
 - [x] Directory structure and `.gitignore` set
 - [x] Requirements documented
-- [ ] Dataset acquired and inspected
+- [x] Dataset download instructions documented (`docs/DATASET.md`)
+- [x] Dataset loading and schema-inspection tooling (`src/data_loader.py`) with tests
+- [ ] Real dataset downloaded and inspected (manual Kaggle step — see `docs/DATASET.md`)
 - [ ] Data cleaning and EDA
 - [ ] Baseline forecasts
 - [ ] Feature engineering and leakage tests
